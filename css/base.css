@@ -1,0 +1,78 @@
+@import url("jquery-ui.css");
+
+body{
+	background-image:url(../img/bg.jpg);;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}
+.container-fluid {
+    clear: both;
+    width: 560px !important;
+}
+
+.champBox {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 21.4% !important;
+	margin-bottom:10px;
+	position:relative;
+}
+
+.champbox{
+    width:100%;
+    height:120px;
+    overflow:auto;
+    float:left;
+    border:1px solid #000000;
+    margin-right:5px;
+    margin-bottom:5px;
+}
+
+.name{
+    background: #FFFF76;
+    background: -webkit-linear-gradient(top, rgba(255,255,118,0.65) 0%, rgba(255,82,0,0.65) 100%);
+    background: -moz-linear-gradient(top, rgba(255,255,118,0.65) 0%, rgba(255,82,0,0.65) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,118,0.65) 0%, rgba(255,82,0,0.65) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,118,0.65) 0%, rgba(255,82,0,0.65) 100%);
+    background: linear-gradient(top, rgba(255,255,118,0.65) 0%, rgba(255,82,0,0.65) 100%);
+    width:100%;
+    height:20px;
+    text-align:center;
+    position:absolute;
+    z-index:1;
+}
+
+.price div {
+    float: left;
+    width: 50%;
+}
+
+.rpIcon {
+    background-image: url("../img/RpPoints.png");
+    background-position: 3px center;
+    background-repeat: no-repeat;
+    background-size: 34% auto;
+    text-indent: 10px;
+}
+
+.ipIcon {
+    background-image: url("../img/IpPoints.png");
+    background-position: 3px center;
+    background-repeat: no-repeat;
+    background-size: 25% auto;
+    text-indent: 10px;
+}
+
+.price{
+    background: -webkit-linear-gradient(top, rgba(255,82,0,0.65) 0%, rgba(255,255,118,0.65) 100%);
+    background: -moz-linear-gradient(top, rgba(255,255,118,0.65) 0%, rgba(255,82,0,0.65) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,118,0.65) 0%, rgba(255,82,0,0.65) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,118,0.65) 0%, rgba(255,82,0,0.65) 100%);
+    background: linear-gradient(top, rgba(255,255,118,0.65) 0%, rgba(255,82,0,0.65) 100%);
+    width:100%;
+    height:20px;
+    text-align:center;
+    position:relative;
+	top:-20px;
+}​

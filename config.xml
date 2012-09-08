@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns		= "http://www.w3.org/ns/widgets"
+	xmlns:gap	= "http://phonegap.com/ns/1.0"
+	id		= "com.phazingazrael.leaguelibrary"
+	version 	= "0.1">
+
+	<name>League Library</name>
+
+	<description>
+		An app for League of Legends that gives character, item and rune information with more features planned.
+	</description>
+
+	<author href="http://www.camerendessert.info"
+		email="dessertinnovations@gmail.com">
+		PhazingAzrael - Cameren Dessert
+	</author>
+
+	<icon src="images/icon.png" gap:role="default" />
+
+	<preference name="orientation" value="portrait" />
+</widget>
