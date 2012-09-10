@@ -8,11 +8,11 @@ require(['libs/text!home.html', 'libs/text!footer.html','js/champs.js','libs/tex
         initialize: function() {
             this.footerView = new FooterView();
             this.footerView.render();
-            this.Pageview = new pageView();
-            this.Pageview.render();
+            //this.Pageview = new pageView();
+            //this.Pageview.render();
         },
         home: function() {
-            this.homeView = new selectView();
+            this.homeView = new SelectView();
             this.homeView.render();
         }
     });
@@ -24,7 +24,7 @@ require(['libs/text!home.html', 'libs/text!footer.html','js/champs.js','libs/tex
             this.$el.html(_.template(this.template));
         }
     })
-    selectView = Backbone.View.extend({
+    SelectView = Backbone.View.extend({
         el: "#content",
         initialize: function() {
             Name=champDB.name;
