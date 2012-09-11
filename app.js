@@ -28,18 +28,14 @@ require(['libs/text!home.html', 'libs/text!footer.html','js/champs.js','libs/tex
         el: "#content",
         initialize: function() {
             Name=champDB.name;
-            Rp_Point=champDB.Rp_Point;
-            Ip_Point=champDB.Ip_Point;
+            Rp_Point = champDB.Rp_Point;
+            Ip_Point = champDB.Ip_Point;
         },
         render: function() {
-            _.each(champDB,function(){
-                console.log("Beginning");
+            _.each(champDB,function(champ){
                 _.templateSettings.interpolate = /\{\{(.+?)\}\}/g; //The mustache regexp thing.
-                console.log("first Bit");
                 var template = _.template(champTpl);
-                console.log("second Bit");
-                $('#content').append(template);
-                console.log("last Bit");
+                $('#content').append(template(champ));
             })
             
         }

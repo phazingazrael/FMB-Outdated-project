@@ -1,4 +1,4 @@
-﻿define([], function(){
+define([], function(){
 	var Champions = [{
 		"Name": "Ahri",
 		"Title": "The Nine-Tailed Fox",
