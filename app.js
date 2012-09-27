@@ -1,4 +1,4 @@
-require(['libs/text!home.html', 'libs/text!footer.html','js/champs.js','libs/text!templates/champbox.html'], function (homeTpl, footerTpl, champDB, champTpl) {
+require(['libs/text!home.html', 'libs/text!footer.html','js/champs.js','libs/text!templates/champbox.html', 'libs/text!templates/champpage.html'], function (homeTpl, footerTpl, champDB, champTpl, pageTpl) {
 	
     var ApplicationRouter = Backbone.Router.extend({
         routes: {
@@ -8,8 +8,8 @@ require(['libs/text!home.html', 'libs/text!footer.html','js/champs.js','libs/tex
         initialize: function() {
             this.footerView = new FooterView();
             this.footerView.render();
-            //this.Pageview = new pageView();
-            //this.Pageview.render();
+            this.Pageview = new pageView();
+            this.Pageview.render();
         },
         home: function() {
             this.homeView = new SelectView();
@@ -41,12 +41,19 @@ require(['libs/text!home.html', 'libs/text!footer.html','js/champs.js','libs/tex
         }
     });
     pageView = Backbone.View.extend({
-        el: "#pages",
-        initialize:function(){},
-        render: function(){
-            for (var e = 0, len = champDB.length; e<len; e++){
-                $('<div class="'+champDB[e].Name+'-page"></div>').appendTo('#pages');
-            }
+         el: "#pages",
+        initialize: function() {
+            Name=champDB.Name;
+            Title = champDB.Title;
+        },
+        render: function() {
+            _.each(champDB,function(page){
+                _.templateSettings.interpolate = /\{\{(.+?)\}\}/g; //The mustache regexp thing.
+                var template = _.template(pageTpl);
+                $('#pages').append(template(page));
+                
+            })
+            
         }
     });
 	

@@ -1,0 +1,22 @@
+<div id="{{Name}}-page">
+
+    <table>
+        <tr>
+            <td>
+                <img src="img/champicon/{{Name}}.jpg" class="champProf">
+            </td>
+            <td>
+                {{Name}} - {{Title}}
+            </td>
+        </tr>
+        <tr>
+            <td id="Bio">
+                <script type="text/javascript">
+                    //var File ='<pre>'+ $('body').load("bios/{{Name}}.txt");+'</pre>';
+                    $("#Bio").load('bios/{{Name}}.txt');
+                </script>
+            </td>
+        </tr>
+    </table>
+
+</div>
