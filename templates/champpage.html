@@ -3,7 +3,7 @@
     <table>
         <tr>
             <td>
-                <img src="img/champicon/{{Name}}.jpg" class="champProf">
+                <img src="img/champicon/{{Name}}.jpg" class="champProf"/>
             </td>
             <td>
                 {{Name}} - {{Title}}
@@ -12,7 +12,7 @@
         <tr>
             <td class="Bio" colspan="2">
                 <script type="text/javascript">
-                    //$("#{{name}}-page .Bio").load('bios/{{Name}}.txt');
+                    $("#{{Name}}-page").find(".Bio").load('bios/{{Name}}.txt');
                 </script>
             </td>
         </tr>
