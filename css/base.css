@@ -10,6 +10,8 @@ body{
     width: 560px !important;
 }
 
+.Bio{}
+
 .champBox {
     float: left;
     margin-left: 10px;
@@ -63,6 +65,7 @@ body{
     background-size: 25% auto;
     text-indent: 10px;
 }
+
 
 .price{
     background: -webkit-linear-gradient(top, rgba(255,82,0,0.65) 0%, rgba(255,255,118,0.65) 100%);

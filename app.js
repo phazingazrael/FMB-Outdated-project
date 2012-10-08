@@ -6,9 +6,7 @@ require(['libs/text!home.html', 'libs/text!footer.html','js/champs.js','libs/tex
             "*actions": "home"
         },
         initialize: function() {
-            this.footerView = new FooterView();
-            this.footerView.render();
-            this.Pageview = new pageView();
+            this.Pageview = new PageView();
             this.Pageview.render();
         },
         home: function() {
@@ -27,7 +25,7 @@ require(['libs/text!home.html', 'libs/text!footer.html','js/champs.js','libs/tex
     SelectView = Backbone.View.extend({
         el: "#content",
         initialize: function() {
-            Name=champDB.name;
+            Name = champDB.name;
             Rp_Point = champDB.Rp_Point;
             Ip_Point = champDB.Ip_Point;
         },
@@ -36,23 +34,27 @@ require(['libs/text!home.html', 'libs/text!footer.html','js/champs.js','libs/tex
                 _.templateSettings.interpolate = /\{\{(.+?)\}\}/g; //The mustache regexp thing.
                 var template = _.template(champTpl);
                 $('#content').append(template(champ));
-            })
+            });
             
         }
     });
-    pageView = Backbone.View.extend({
-         el: "#pages",
+    PageView = Backbone.View.extend({
+        el: "#pages",
         initialize: function() {
-            Name=champDB.Name;
+            Champ_Id = champDB.Champ_Id;
+            Name = champDB.Name;
             Title = champDB.Title;
         },
         render: function() {
-            _.each(champDB,function(page){
+            
+            Bio = $.get("bios/"+Name+".txt");
+            _.each(champDB,function(profile){
                 _.templateSettings.interpolate = /\{\{(.+?)\}\}/g; //The mustache regexp thing.
                 var template = _.template(pageTpl);
-                $('#pages').append(template(page));
+                $('#pages').append(template(profile));
                 
-            })
+                $("#"+Name+"-page .Bio").html(Bio)
+            });            
             
         }
     });

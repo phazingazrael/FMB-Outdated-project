@@ -1,19 +1,19 @@
 <div id="{{Name}}-page">
-
+    
     <table>
         <tr>
             <td>
-                <img src="img/champicon/{{Name}}.jpg" class="champProf"/>
+                <img src="img/champicon/{{Name}}.jpg"/>
             </td>
             <td>
                 {{Name}} - {{Title}}
             </td>
         </tr>
         <tr>
-            <td class="Bio" colspan="2">
-                <script type="text/javascript">
-                    $("#{{Name}}-page").find(".Bio").load('bios/{{Name}}.txt');
-                </script>
+            <td colspan="2">
+                <div class="Bio">
+
+                </div>
             </td>
         </tr>
     </table>
